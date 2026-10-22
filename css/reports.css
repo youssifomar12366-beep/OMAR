@@ -1,0 +1,84 @@
+.report-period {
+  display: grid;
+  min-width: min(100%, 220px);
+  gap: 6px;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.report-period select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  color: var(--color-text);
+  background: var(--color-white);
+  font: inherit;
+}
+
+.report-period select:focus {
+  border-color: var(--color-primary);
+  outline: 3px solid rgba(25, 118, 210, 0.13);
+}
+
+.report-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.report-card {
+  min-width: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.report-card h3 {
+  margin: 0 0 10px;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.report-card p {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.report-card p.report-profit-amount--positive {
+  color: var(--color-success);
+}
+
+.report-card p.report-profit-amount--negative {
+  color: var(--color-danger);
+}
+
+.report-note {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  color: var(--color-muted);
+  background: var(--color-white);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .report-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .report-cards {
+    grid-template-columns: 1fr;
+  }
+}
